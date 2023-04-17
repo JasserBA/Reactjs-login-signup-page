@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Raleway:ital,wght@0,500;1,100&family=Work+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap');
+::-webkit-scrollbar {
+    width: 20px;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: rgb(158, 171, 132); 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(86, 94, 72); 
+  }
+html{
+    scroll-behavior: smooth;
+
+}
+.button-section0{
+    display: flex;
+}
+.button-show-hide {
+    margin:300px 350px  ;
+    text-align: center;
+    font-size: 20px;
+    width: 255px;
+    border-radius:  25px;
+    border: none ;
+    background-color: rgb(0, 255, 242);
+    text-transform:uppercase ;
+    transition: all .4s;
+    padding: 10px;
+    box-shadow: 0 10px 30px 0 grey;
+    -webkit-box-shadow: 0 10px 30px 0 grey;
 }
 
-.App-logo {
-  height: 40vmin;
+.button-show-hide:hover{
+    margin:300px 350px  ;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 275px;
+    border-radius:  25px;
+    border: none ;
+    background-color: rgb(0, 0, 0);
+    text-transform:uppercase ;
+    transition: all .4s;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px 0 grey;
+    -webkit-box-shadow: 0 10px 30px 0 grey;
+}/*
+.button-show-hide:after{
+    margin:4000px 0px 0px ;
+    text-align: left;
+    font-size: 20px;
+    width: 275px;
+    border-radius:  25px;
+    border: none ;
+    background-color: rgb(0, 255, 242);
+    text-transform:uppercase ;
+    transition: all .4s;
+    padding: 10px;
+    -webkit-box-shadow: 0 10px 30px 0 grey;
+}*/
+
+body .Button-section{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size:cover ;
+    background-position: center;
+    border-radius: 20px;
+    height: 50%;
+}
+
+.container{
+    margin: 50px;
+    position: relative;
+    height: 350px;
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 40px 320px;
+    box-shadow: 0 10px 30px 0 greenyellow;
+    -webkit-box-shadow: 0 10px 30px 0 greenyellow;
+    border-radius: 20px;
+}
+header{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 70px;
+    font-size: 22px;
+}
+.input-field{
+    margin: 25px;
+    position: relative;
+    height: 50px;
+}
+
+.input-field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    font-size: 20px;
+    transition: ease-out 0.1s;
+    border-radius: 6px;
+    border: none;
+    border-bottom: 1px solid silver;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-family: 'Raleway', sans-serif;
   pointer-events: none;
+  color: grey;
+  font-size: 18px;
+  transition: .4s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+input:focus ~ label,
+input:valid ~ label {
+  transform: translateY(-30px);
+  background: white;
+  font-size: 16px;
+  color: rgb(104, 170, 5);
+}
+
+
+form button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 25px;
+    border: none ;
+    background-color: greenyellow;
+    text-transform:uppercase ;
+    transition: all .4s;
+    padding: 10px;
+    box-shadow: 0 10px 30px 0 grey;
+    -webkit-box-shadow: 0 10px 30px 0 grey;
+}
+form button:hover{
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 30px;
+    font-size: 20px;
+    width: 275px;
+    border-radius:  25px;
+    border: none ;
+    background-color: rgb(55, 55, 55);
+    cursor: pointer;
+    box-shadow: 0 10px 30px 0 greenyellow;
+    -webkit-box-shadow: 0 10px 30px 0 greenyellow;
+}
+form .button button:focus{
+    margin-bottom: 20px;
+    color: white;
+    margin-top: 20px;
+    font-size: 30px;
+    width: 275px;
+    border-radius:  25px;
+    border: none ;
+    background-color: rgb(55, 55, 55);
+    cursor: pointer;
+}
+.text1{
+    margin-bottom: -20px;
+}
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    padding-right: 7px;
   }
+a {
+    color:rgb(109, 180, 3);
+    text-decoration: none;
+    font-family: 'Exo', sans-serif; }
+p{
+    text-align: left;
+    color: grey;
+    font-weight: 2px;  }
+a:hover{
+        color:rgb(59, 59, 59);
+        transition: ease-in-out .2s;}
+        
+.logos img{
+    margin-right: 10px;
+    display:inline-block;
+    height: 40px;
+    margin-top: 20px;
+    justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logos img:hover{
+    opacity: 80%;
+    margin-right: 10px;
+    display:inline-block;
+    height: 40px;
+    margin-top: 20px;
+    justify-content: center;
 }
